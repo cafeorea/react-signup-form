@@ -1,49 +1,182 @@
-.form {
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 90%;
-  max-width: 40rem;
+@media screen and (min-width: 500px) {
+  .title {
+    text-align: center;
+    font-size: 40px;
+    color: #5e4730;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .form {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+  }
+
+  .input {
+    max-width: 65%;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+  }
+
+  .name {
+    text-align: center;
+    width: 100%;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  .age {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  .gender {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    justify-content: space-evenly;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="radio"] :after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid #628a56;
+  }
+
+  input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #628a56;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+
+  .box {
+    color: grey;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: inset 2px 2px 5px grey, inset -5px -5px 10px white;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline-color: #ff9f1c;
+    outline-width: 1px;
+  }
 }
 
-.input {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: auto;
-}
+@media screen and (max-width: 500px) {
+  .title {
+    text-align: center;
+    font-size: 35px;
+    margin: 5px;
+    color: #5e4730;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
 
-.name {
-  text-align: center;
-  width: 100%;
-  padding: 0.15rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 10px;
-}
-.age {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 0.5rem;
-}
+  .form {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+  }
 
-.gender {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
+  .input {
+    max-width: 90%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+  }
 
-.box {
-  color: grey;
-  height: 25px;
-  border-radius: 7px;
-  border: none;
-  box-shadow: inset 2px 2px 5px grey, inset -5px -5px 10px white;
-}
+  .name {
+    text-align: center;
+    width: 100%;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  .age {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+  }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline-color: #8eb082;
-  outline-width: 1px;
+  .gender {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    justify-content: space-evenly;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="radio"] :after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid #628a56;
+  }
+
+  input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #628a56;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+
+  .box {
+    color: grey;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: inset 2px 2px 5px grey, inset -5px -5px 10px white;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline-color: #8eb082;
+    outline-width: 1px;
+  }
 }

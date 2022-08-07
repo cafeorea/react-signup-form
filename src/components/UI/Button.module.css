@@ -1,0 +1,37 @@
+@media screen and (min-width: 500px) {
+  .button {
+    display: block;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 20px;
+    background-color: #ff9f1c;
+    color: #473524;
+    font-weight: bold;
+    height: 35px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 35%;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px rgb(121, 120, 120);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    display: block;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 18px;
+    background-color: #ff9f1c;
+    color: #473524;
+    font-weight: bold;
+    height: 35px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px rgb(121, 120, 120);
+  }
+}

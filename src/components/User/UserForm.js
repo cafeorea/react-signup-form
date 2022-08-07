@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../UI/Card";
 import styles from "./UserForm.module.css";
+import Button from "../UI/Button";
 
 const UserForm = (props) => {
   const submitHandler = (event) => {
@@ -8,6 +9,7 @@ const UserForm = (props) => {
   };
   return (
     <Card className={styles.form}>
+      <h1 className={`${styles.title}`}>試合申込</h1>
       <form className={`${styles.input}`} onSubmit={submitHandler}>
         <div className={`${styles.name}`}>
           <div>
@@ -28,14 +30,35 @@ const UserForm = (props) => {
           <input className={`${styles.box}`} id="age" type="date"></input>
         </div>
         <div className={`${styles.gender}`}>
-          <input type="radio" id="male" name="gender" />
-          男
-          <input type="radio" id="female" name="gender" />
-          女
-          <input type="radio" id="other" name="gender" />
-          その他
+          <label>
+            <input
+              className={`${styles.radio}`}
+              type="radio"
+              id="male"
+              name="gender"
+            />{" "}
+            男
+          </label>
+          <label>
+            <input
+              className={`${styles.radio}`}
+              type="radio"
+              id="female"
+              name="gender"
+            />{" "}
+            女
+          </label>
+          <label>
+            <input
+              className={`${styles.radio}`}
+              type="radio"
+              id="other"
+              name="gender"
+            />{" "}
+            その他
+          </label>
         </div>
-        <button type="submit">Submit</button>
+        <Button type="submit">Submit</Button>
       </form>
     </Card>
   );
