@@ -1,0 +1,49 @@
+.form {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.input {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+.name {
+  text-align: center;
+  width: 100%;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.age {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.gender {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.box {
+  color: grey;
+  height: 25px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: inset 2px 2px 5px grey, inset -5px -5px 10px white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: #8eb082;
+  outline-width: 1px;
+}
