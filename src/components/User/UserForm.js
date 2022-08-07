@@ -7,11 +7,23 @@ const UserForm = (props) => {
   const [surname, setSurname] = useState("");
   const [firstName, setFirstName] = useState("");
   const [birthday, setBirthday] = useState("");
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("off");
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(`${surname}, ${firstName}, ${birthday}, ${gender}`);
+    if (
+      surname.trim().length === 0 ||
+      firstName.trim().length === 0 ||
+      !isNaN(birthday)
+    ) {
+      return;
+    } else {
+      console.log(`${surname}, ${firstName}, ${birthday}, ${gender}`);
+      setSurname("");
+      setFirstName("");
+      setBirthday("");
+      setGender("off");
+    }
   };
 
   const surnameHandler = (event) => {
@@ -27,7 +39,7 @@ const UserForm = (props) => {
   };
 
   const genderHandler = (event) => {
-    setGender(event.target.value);
+    setGender(event.target.id);
   };
 
   return (
@@ -42,6 +54,7 @@ const UserForm = (props) => {
               id="surname"
               type="text"
               onChange={surnameHandler}
+              value={surname}
             ></input>
           </div>
           <div>
@@ -51,6 +64,7 @@ const UserForm = (props) => {
               id="first-name"
               type="text"
               onChange={firstNameHandler}
+              value={firstName}
             ></input>
           </div>
         </div>
@@ -61,6 +75,7 @@ const UserForm = (props) => {
             id="age"
             type="date"
             onChange={birthdayHandler}
+            value={birthday}
           ></input>
         </div>
         <div className={`${styles.gender}`}>
@@ -68,9 +83,10 @@ const UserForm = (props) => {
             <input
               className={`${styles.radio}`}
               type="radio"
-              value="male"
+              id="male"
               name="gender"
               onChange={genderHandler}
+              value={gender}
             />{" "}
             男
           </label>
@@ -78,9 +94,10 @@ const UserForm = (props) => {
             <input
               className={`${styles.radio}`}
               type="radio"
-              value="female"
+              id="female"
               name="gender"
               onChange={genderHandler}
+              value={gender}
             />{" "}
             女
           </label>
@@ -88,9 +105,10 @@ const UserForm = (props) => {
             <input
               className={`${styles.radio}`}
               type="radio"
-              value="other"
+              id="other"
               name="gender"
               onChange={genderHandler}
+              value={gender}
             />{" "}
             その他
           </label>
