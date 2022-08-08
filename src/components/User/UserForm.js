@@ -7,7 +7,7 @@ const UserForm = (props) => {
   const [surname, setSurname] = useState("");
   const [firstName, setFirstName] = useState("");
   const [birthday, setBirthday] = useState("");
-  const [gender, setGender] = useState("off");
+  const [gender, setGender] = useState(null);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ const UserForm = (props) => {
       setSurname("");
       setFirstName("");
       setBirthday("");
-      setGender("off");
+      setGender("mail");
     }
   };
 
@@ -85,6 +85,7 @@ const UserForm = (props) => {
               type="radio"
               id="male"
               name="gender"
+              checked={gender === "male"}
               onChange={genderHandler}
               value={gender}
             />{" "}
@@ -96,6 +97,7 @@ const UserForm = (props) => {
               type="radio"
               id="female"
               name="gender"
+              checked={gender === "female"}
               onChange={genderHandler}
               value={gender}
             />{" "}
@@ -107,6 +109,7 @@ const UserForm = (props) => {
               type="radio"
               id="other"
               name="gender"
+              checked={gender === "other"}
               onChange={genderHandler}
               value={gender}
             />{" "}
